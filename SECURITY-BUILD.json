@@ -2,8 +2,8 @@
   "upstream_commit": "d8cf1800dc1abd7fda1828cab105d7a6b5a50eb1",
   "go_toolchain": "1.27.3",
   "build_commands": [
-    "CGO_ENABLED=0 GOTOOLCHAIN=local go build -trimpath -ldflags=\"-s -w\" -tags frpc -o frpc ./cmd/frpc",
-    "CGO_ENABLED=0 GOTOOLCHAIN=local go build -trimpath -ldflags=\"-s -w\" -tags frps -o frps ./cmd/frps"
+    "CGO_ENABLED=0 GOTOOLCHAIN=local go build -trimpath -tags frpc -o frpc ./cmd/frpc",
+    "CGO_ENABLED=0 GOTOOLCHAIN=local go build -trimpath -tags frps -o frps ./cmd/frps"
   ],
   "change": "Update security dependencies and certificate handling.",
   "note": "Toolchain and module locks match the deployed security build; this manifest does not contain deployment credentials."
